@@ -37,8 +37,8 @@ int main(int argc, char **argv) {
     return 0; }
   //This is a basic check to make sure none of the values are less than 0 or greater than 2,147,483,647
 
-  p3 = 1.5 * (log10((runsScored + runsAllowed) / gamesPlayed)) + 0.45;
-  p4 = pow(((runsScored + runsAllowed) / gamesPlayed), 0.287);
+  p3 = (1.5 * log10(((float) runsScored + runsAllowed) / gamesPlayed)) + 0.45;
+  p4 = pow((((float) runsScored + runsAllowed) / gamesPlayed), 0.287);
   //These quations calculate the needed p values
 
   winPercentage1 = (pow(runsScored, p1)) / (pow(runsScored, p1) + pow(runsAllowed, p1)) * 100;
